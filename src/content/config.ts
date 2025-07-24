@@ -49,15 +49,19 @@ const sermonsCollection = defineCollection({
   }),
 });
 
-const ministriesCollection = defineCollection({
+const mountaineeringCollection = defineCollection({
   type: 'content',
   schema: z.object({
-    name: z.string(),
-    logo: z.string().startsWith('/uploads/ministries/').optional(),
-    summary: z.string(),
-    coordinator: z.string().optional(),
-    contact: z.string().optional(), // Email or text
-    schedule: z.string().optional(),
+    title: z.string(),
+    subtitle: z.string(),
+    image: z.string().startsWith('/uploads/mountaineering/').optional(),
+    summary: z.string().optional(), 
+    dates: z.string().optional(),
+    duration: z.string().optional(), 
+    season: z.string().optional(),
+    difficulty: z.string().optional(),
+    videoUrl: z.string().url().optional(),
+    pax: z.string().optional(),
     order: z.number().optional(),
     draft: z.boolean().default(false),
   }),
@@ -91,7 +95,7 @@ export const collections = {
   staff: staffCollection,
   events: eventsCollection,
   sermons: sermonsCollection,
-  ministries: ministriesCollection,
+  mountaineering: mountaineeringCollection,
   blog: blogCollection,
   siteInfo: siteInfoCollection,
 };

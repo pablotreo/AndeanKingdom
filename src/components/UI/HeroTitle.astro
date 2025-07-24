@@ -1,0 +1,17 @@
+---
+const titleLines = [
+  { text: "Discover", ml: "ml-4", mr: "mr-8" },
+  { text: "Cordillera Blanca", ml: "ml-12", mr: "mr-16" },
+  { text: "and Huayhuash", ml: "ml-24", mr: "mr-32" },
+];
+---
+
+<h1 class="text-2xl md:text-7xl font-normal mb-4 text-white text-left leading-tight">
+  {titleLines.map(({ text, ml, mr }, index) => (
+    <span
+      class={`block opacity-0 animate-fade-slide text-white ${ml} ${mr} animation-delay-${index}`}
+    >
+      {text}
+    </span>
+  ))}
+</h1>

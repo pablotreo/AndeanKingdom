@@ -14,8 +14,8 @@ const {
   title,
   description,
   image = {
-    url: "/uploads/church-default.webp",
-    alt: "Church Name",
+    url: "/uploads/logo.png",
+    alt: "Andean Kingdom",
   },
   type = "website",
   canonicalUrl,
@@ -24,9 +24,9 @@ const {
 // Get the canonical URL
 const canonicalURL = canonicalUrl || new URL(Astro.url.pathname, Astro.site);
 
-// Get Church address and contact info (would come from site config in a real implementation)
-const churchInfo = {
-  name: "Church Name",
+// Address and contact info (would come from site config in a real implementation)
+const info = {
+  name: "Andean Kingdom",
   address: {
     streetAddress: "123 Main Street",
     addressLocality: "Anytown",
@@ -65,19 +65,19 @@ const churchInfo = {
 <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Church",
-    "name": "${churchInfo.name}",
+    "@type": "Agency",
+    "name": "${info.name}",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "${churchInfo.address.streetAddress}",
-      "addressLocality": "${churchInfo.address.addressLocality}",
-      "addressRegion": "${churchInfo.address.addressRegion}",
-      "postalCode": "${churchInfo.address.postalCode}",
-      "addressCountry": "${churchInfo.address.addressCountry}"
+      "streetAddress": "${info.address.streetAddress}",
+      "addressLocality": "${info.address.addressLocality}",
+      "addressRegion": "${info.address.addressRegion}",
+      "postalCode": "${info.address.postalCode}",
+      "addressCountry": "${info.address.addressCountry}"
     },
-    "telephone": "${churchInfo.telephone}",
-    "email": "${churchInfo.email}",
-    "url": "${churchInfo.url}"
+    "telephone": "${info.telephone}",
+    "email": "${info.email}",
+    "url": "${info.url}"
   }
 </script>
 
@@ -92,7 +92,7 @@ const churchInfo = {
         "description": "${description}",
         "publisher": {
           "@type": "Organization",
-          "name": "${churchInfo.name}",
+          "name": "${info.name}",
           "logo": {
             "@type": "ImageObject",
             "url": "${new URL("/uploads/logo.png", Astro.site)}"

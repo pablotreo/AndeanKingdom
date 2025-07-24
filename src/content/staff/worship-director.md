@@ -1,34 +1,32 @@
 ---
-name: "David Wilson"
-title: "Worship Director"
+name: "Tomás Ibarra"
+title: "Trekking Guide & Environmental Educator"
 image: "/uploads/staff/david-wilson.webp"
-email: "david.wilson@churchname.org"
-phone: "+1-555-0104"
-bio: "David leads our worship ministry with passion and excellence, bringing over 15 years of experience in church music."
-order: 4
+email: "tomas.ibarra@andeanexpeditions.org"
+phone: "+54-261-555-3030"
+bio: "Tomás leads trekking groups and teaches environmental ethics through immersive outdoor experiences."
+order: 3
 draft: false
 ---
 
-David Wilson joined our staff in 2018, bringing a wealth of experience in worship leadership and music education. He holds a Bachelor's degree in Music from Example University and has completed advanced studies in worship ministry.
+Tomás Ibarra has led trekking adventures across the Andes for over a decade. With certifications in wilderness education and park interpretation, he combines outdoor leadership with a strong focus on conservation and community awareness.
 
-## Areas of Leadership
+## Specialty Areas
 
-- Planning and leading worship services
-- Directing the church choir
-- Mentoring worship team members
-- Organizing special music events
-- Overseeing technical production
+- Multi-day treks to basecamp
+- Environmental interpretation
+- Leave No Trace education
+- Youth & school group leadership
+- Trail restoration collaboration
 
-## Musical Background
+## Guiding Values
 
-David is proficient in multiple instruments including piano, guitar, and voice. He has written several worship songs and continues to contribute to our church's musical repertoire.
+Tomás centers his work on:
+- Respecting local ecosystems
+- Educating through lived experience
+- Fostering a love for wild places
+- Promoting inclusive outdoor access
 
-## Vision for Worship
+## Background
 
-David believes in creating an inclusive worship environment that:
-- Honors God with excellence
-- Encourages participation from all generations
-- Blends traditional and contemporary styles
-- Develops new worship leaders
-
-Contact David to learn more about our worship ministry or to schedule an audition for the worship team.
+Tomás grew up in Bariloche and studied environmental science. He’s worked with NGOs on conservation trails and regularly volunteers with local park rangers. When not on the trail, he plays classical guitar and leads workshops on mountain stewardship.

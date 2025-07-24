@@ -16,11 +16,11 @@ export interface Props {
 }
 
 const {
-  title = "Church Name - A Welcoming Christian Community",
-  description = "We are a welcoming Christian community dedicated to sharing God's love through worship, fellowship, and service.",
+  title = "Andean Kingdom - If you think it's impossible, we can make it happen.",
+  description = "Andean Kingdom is your gateway to adventure in the Peruvian Andes. Experience the thrill of mountaineering, trekking, and cultural exploration with our expeditions and tours.",
   image = {
-    url: "/uploads/church-default.webp",
-    alt: "Church Name",
+    url: "/uploads/Home/aboutUs.jpg",
+    alt: "Andean Kingdom",
   },
   type = "website",
   canonicalUrl,
@@ -32,7 +32,7 @@ const {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
     
     <Seo
@@ -42,6 +42,8 @@ const {
       type={type}
       canonicalUrl={canonicalUrl}
     />
+    <!-- <link rel="preconnect" href="https://rsms.me/"> -->
+    <!-- <link rel="stylesheet" href="https://rsms.me/inter/inter.css">   -->
     
     <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">

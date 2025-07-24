@@ -1,30 +1,32 @@
 ---
-name: "Rev. Dr. John Smith"
-title: "Senior Pastor"
-image: "/uploads/staff/john-smith.webp"
-email: "pastor.john@churchname.org"
-phone: "+1-555-0101"
-bio: "Pastor John has been faithfully serving our congregation for over 12 years, bringing wisdom, compassion, and biblical teaching to our community."
-order: 1
+name: "Elena Duarte"
+title: "Basecamp Operations Manager"
+image: "/uploads/staff/sarah-martinez.webp"
+email: "elena.duarte@andeanexpeditions.org"
+phone: "+54-261-555-2020"
+bio: "Elena coordinates our basecamp logistics and ensures every climber has the support they need before summit attempts."
+order: 2
 draft: false
 ---
 
-Rev. Dr. John Smith has been the Senior Pastor of our church since 2013. He holds a Doctor of Ministry from Seminary University and has over 20 years of pastoral experience.
+Elena Duarte joined our logistics team in 2017, bringing a background in expedition planning and outdoor hospitality. She studied tourism logistics at the University of Cuyo and is passionate about supporting climbers behind the scenes.
 
-## Ministry Philosophy
+## Core Responsibilities
 
-Pastor John believes in expository preaching, pastoral care, and community engagement. His heart is to see people grow in their relationship with Christ and serve others with love.
+- Basecamp setup & supply coordination
+- Gear transport and inventory
+- Porter team scheduling
+- Food and hydration logistics
+- Emergency communication support
 
-## Areas of Focus
+## Vision for Basecamp Support
 
-- Biblical preaching and teaching
-- Pastoral counseling and care
-- Leadership development
-- Community outreach initiatives
-- Vision casting for the church
+Elena believes operational excellence includes:
+- Anticipating climbers' needs
+- Creating a welcoming and safe basecamp
+- Empowering support staff
+- Prioritizing sustainability in the mountains
 
-## Personal Life
+## Background
 
-Pastor John is married to Sarah, and they have three children. He enjoys reading, hiking, and spending time with his family. He is also an avid supporter of local community programs.
-
-Contact Pastor John for pastoral care, counseling, or to discuss the vision and direction of our church.
+Originally from San Rafael, Elena has worked in mountain tourism since 2008. She’s known for her logistical problem-solving and calm under pressure. Outside of the season, she consults for trail development projects in Patagonia and practices alpine photography.

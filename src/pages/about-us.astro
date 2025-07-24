@@ -1,276 +1,318 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import PageHeader from "../components/Sections/PageHeader.astro";
-import StaffList from "../components/Sections/StaffList.astro";
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/Sections/PageHeader.astro';
+import StaffList from '../components/Sections/StaffList.astro';
 ---
 
 <BaseLayout
-  title="About Us - Church Name"
-  description="Learn about our church's history, mission, values, and the people who make our community special."
+  title='About Us - Andean Kingdom'
+  description='Learn more about Andean Kingdom, our mission, vision, and the team dedicated to providing unforgettable adventures in the Peruvian Andes.'
 >
-  <PageHeader 
-    title="About Us" 
+<PageHeader
+    title="About Us"
     subtitle="Our History, Mission, and Values"
-    backgroundImage="https://images.unsplash.com/photo-1438032005730-c779502df39b?w=1920&h=600&fit=crop&crop=center"
+    backgroundImage="/uploads/aboutUs/about-us.jpg"
   />
-  
+
   <!-- Mission & Vision -->
-  <section class="py-16">
-    <div class="container">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+  <section class='py-16'>
+    <div class='container'>
+      <div class='grid grid-cols-1 md:grid-cols-2 gap-12 items-center'>
         <div>
-          <h2 class="text-3xl md:text-4xl font-bold mb-6">Our Mission</h2>
-          <p class="text-xl text-gray-700 mb-8">
-            To know Christ and to make Him known through worship, discipleship, fellowship, and service.
+          <h2 class='text-3xl md:text-4xl font-bold mb-6'>Our Mission</h2>
+          <p class='text-xl text-gray-700 mb-8'>
+            At Andean Kingdom, our mission is to deliver exceptional trekking
+            and mountaineering experiences in the Peruvian Andes, offering
+            high-quality logistics, gear rentals, and expert guidance. We are
+            committed to safety, sustainability, and cultural respect, helping
+            adventurers connect with the mountains in meaningful and responsible
+            ways.
           </p>
-          
-          <h2 class="text-3xl md:text-4xl font-bold mb-6">Our Vision</h2>
-          <p class="text-xl text-gray-700 mb-8">
-            To be a vibrant, growing community of believers who are transformed by the Gospel and transforming our community with the love of Christ.
+
+          <h2 class='text-3xl md:text-4xl font-bold mb-6'>Our Vision</h2>
+          <p class='text-xl text-gray-700 mb-8'>
+            To be the trusted gateway to the Cordillera Blanca and Huayhuash,
+            known for excellence in expedition services and a deep commitment to
+            the environment, local communities, and the transformative power of
+            the Andes.
           </p>
         </div>
-        
-        <div>
-          <img 
-            src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&h=600&fit=crop&crop=center" 
-            alt="Worship at our church" 
-            class="rounded-lg shadow-lg object-cover w-full h-full"
-          />
+
+        <div
+          class='aspect-w-16 aspect-h-9 rounded-sm shadow-lg overflow-hidden'
+        >
+          <iframe
+            width='660'
+            height='371'
+            src='https://www.youtube.com/embed/gkXIuTdWxks?si=36vVDmwAbiVMIjRD&controls=0'
+            title='Andean Kingdom Video'
+            allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+            referrerpolicy='strict-origin-when-cross-origin'
+            allowfullscreen></iframe>
         </div>
       </div>
     </div>
   </section>
-  
+
   <!-- Core Values -->
-  <section class="py-16 bg-gray-50">
-    <div class="container">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Core Values</h2>
-        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-          These principles guide everything we do as a church community
+  <section class='py-16 bg-gray-50'>
+    <div class='container'>
+      <div class='text-center mb-12'>
+        <h2 class='text-3xl md:text-4xl font-bold mb-4'>Our Core Values</h2>
+        <p class='text-xl text-gray-600 max-w-3xl mx-auto'>
+          These values guide how we operate and serve our clients in the high
+          mountains of Peru.
         </p>
       </div>
-      
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="bg-white p-8 rounded-lg shadow-sm">
-          <div class="w-16 h-16 rounded-full bg-primary-100 flex items-center justify-center mb-6">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+
+      <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+        <!-- Mountain Safety -->
+        <div class='bg-white p-8 rounded-lg shadow-sm'>
+          <div
+            class='w-16 h-16 rounded-full bg-primary-100 flex items-center justify-center mb-6'
+          >
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              class='h-8 w-8 text-primary-600'
+              fill='none'
+              viewBox='0 0 24 24'
+              stroke='currentColor'
+            >
+              <path
+                stroke-linecap='round'
+                stroke-linejoin='round'
+                stroke-width='2'
+                d='M3 17l6-6 4 4L21 7'></path>
             </svg>
           </div>
-          <h3 class="text-xl font-bold mb-3">Biblical Teaching</h3>
-          <p class="text-gray-700">
-            We are committed to teaching God's Word faithfully and helping people apply it to their lives. We believe the Bible is God's inspired, inerrant Word and our ultimate authority.
+          <h3 class='text-xl font-bold mb-3'>Mountain Safety</h3>
+          <p class='text-gray-700'>
+            We prioritize the safety of our clients and staff on every
+            expedition, using top-quality equipment and highly trained guides
+            with deep local knowledge.
           </p>
         </div>
-        
-        <div class="bg-white p-8 rounded-lg shadow-sm">
-          <div class="w-16 h-16 rounded-full bg-secondary-100 flex items-center justify-center mb-6">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-secondary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+
+        <!-- Authentic Experiences -->
+        <div class='bg-white p-8 rounded-lg shadow-sm'>
+          <div
+            class='w-16 h-16 rounded-full bg-secondary-100 flex items-center justify-center mb-6'
+          >
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              class='h-8 w-8 text-secondary-600'
+              fill='none'
+              viewBox='0 0 24 24'
+              stroke='currentColor'
+            >
+              <path
+                stroke-linecap='round'
+                stroke-linejoin='round'
+                stroke-width='2'
+                d='M12 2a10 10 0 100 20 10 10 0 000-20z'></path>
             </svg>
           </div>
-          <h3 class="text-xl font-bold mb-3">Authentic Community</h3>
-          <p class="text-gray-700">
-            We believe spiritual growth happens best in community. We foster genuine relationships where people can be known, loved, and challenged to grow in their faith.
+          <h3 class='text-xl font-bold mb-3'>Authentic Experiences</h3>
+          <p class='text-gray-700'>
+            Our adventures are rooted in real connection—with nature, culture,
+            and community. We aim to create journeys that go beyond tourism and
+            foster lasting memories.
           </p>
         </div>
-        
-        <div class="bg-white p-8 rounded-lg shadow-sm">
-          <div class="w-16 h-16 rounded-full bg-accent-100 flex items-center justify-center mb-6">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-accent-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+
+        <!-- Environmental Stewardship -->
+        <div class='bg-white p-8 rounded-lg shadow-sm'>
+          <div
+            class='w-16 h-16 rounded-full bg-accent-100 flex items-center justify-center mb-6'
+          >
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              class='h-8 w-8 text-accent-600'
+              fill='none'
+              viewBox='0 0 24 24'
+              stroke='currentColor'
+            >
+              <path
+                stroke-linecap='round'
+                stroke-linejoin='round'
+                stroke-width='2'
+                d='M12 2C10 9 4 9 4 16c0 4 4 6 8 6s8-2 8-6c0-7-6-7-8-14z'
+              ></path>
             </svg>
           </div>
-          <h3 class="text-xl font-bold mb-3">Missional Living</h3>
-          <p class="text-gray-700">
-            We believe every follower of Jesus is called to share His love with others. We equip and encourage our members to live on mission in their neighborhoods, workplaces, and beyond.
+          <h3 class='text-xl font-bold mb-3'>Environmental Stewardship</h3>
+          <p class='text-gray-700'>
+            We are committed to preserving the fragile ecosystems of the Andes.
+            All our expeditions follow strict Leave No Trace principles.
           </p>
         </div>
-        
-        <div class="bg-white p-8 rounded-lg shadow-sm">
-          <div class="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mb-6">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+
+        <!-- Local Empowerment -->
+        <div class='bg-white p-8 rounded-lg shadow-sm'>
+          <div
+            class='w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mb-6'
+          >
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              class='h-8 w-8 text-green-600'
+              fill='none'
+              viewBox='0 0 24 24'
+              stroke='currentColor'
+            >
+              <path
+                stroke-linecap='round'
+                stroke-linejoin='round'
+                stroke-width='2'
+                d='M12 8c-1.5-2-4-2-5.5 0S4 14 4 14s3-2 4-1 2 2 4 2 3-1 3-2-1-2-2-2z'
+              ></path>
             </svg>
           </div>
-          <h3 class="text-xl font-bold mb-3">Spiritual Growth</h3>
-          <p class="text-gray-700">
-            We are committed to helping people grow in their relationship with Christ, becoming more like Him in their thoughts, words, and actions through discipleship and spiritual practices.
+          <h3 class='text-xl font-bold mb-3'>Local Empowerment</h3>
+          <p class='text-gray-700'>
+            We work with local guides, porters, and suppliers to ensure our
+            operations support Huaraz's economy and respect the region’s rich
+            heritage.
           </p>
         </div>
-        
-        <div class="bg-white p-8 rounded-lg shadow-sm">
-          <div class="w-16 h-16 rounded-full bg-purple-100 flex items-center justify-center mb-6">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
+
+        <!-- Quality Gear & Logistics -->
+        <div class='bg-white p-8 rounded-lg shadow-sm'>
+          <div
+            class='w-16 h-16 rounded-full bg-purple-100 flex items-center justify-center mb-6'
+          >
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              class='h-8 w-8 text-purple-600'
+              fill='none'
+              viewBox='0 0 24 24'
+              stroke='currentColor'
+            >
+              <path
+                stroke-linecap='round'
+                stroke-linejoin='round'
+                stroke-width='2'
+                d='M7 7h10v10H7z M12 3v4 M12 17v4 M3 12h4 M17 12h4'></path>
             </svg>
           </div>
-          <h3 class="text-xl font-bold mb-3">Spirit-Led Worship</h3>
-          <p class="text-gray-700">
-            We value authentic, heartfelt worship that glorifies God and transforms lives. We seek to create environments where people can encounter God's presence.
+          <h3 class='text-xl font-bold mb-3'>Quality Gear & Logistics</h3>
+          <p class='text-gray-700'>
+            Whether you're climbing a 6,000-meter peak or trekking to a glacial
+            lake, we provide reliable logistics and well-maintained rental gear.
           </p>
         </div>
-        
-        <div class="bg-white p-8 rounded-lg shadow-sm">
-          <div class="w-16 h-16 rounded-full bg-yellow-100 flex items-center justify-center mb-6">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
+
+        <!-- Passion for the Andes -->
+        <div class='bg-white p-8 rounded-lg shadow-sm'>
+          <div
+            class='w-16 h-16 rounded-full bg-yellow-100 flex items-center justify-center mb-6'
+          >
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              class='h-8 w-8 text-yellow-600'
+              fill='none'
+              viewBox='0 0 24 24'
+              stroke='currentColor'
+            >
+              <path
+                stroke-linecap='round'
+                stroke-linejoin='round'
+                stroke-width='2'
+                d='M3 17l6-6 4 4L21 7M3 21h18'></path>
             </svg>
           </div>
-          <h3 class="text-xl font-bold mb-3">Servant Leadership</h3>
-          <p class="text-gray-700">
-            We believe leadership is about service, not status. We develop and empower leaders who model Christ-like humility and sacrifice as they guide others.
+          <h3 class='text-xl font-bold mb-3'>Passion for the Andes</h3>
+          <p class='text-gray-700'>
+            We love these mountains and want to share that passion with every
+            client. The Andes are our home—and your next great adventure.
           </p>
         </div>
       </div>
     </div>
   </section>
-  
+
   <!-- Church History -->
-  <section class="py-16">
-    <div class="container">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">Our History</h2>
-        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-          The story of how our church has grown and evolved over the years
+  <section class='py-16'>
+    <div class='container'>
+      <div class='text-center mb-12'>
+        <h2 class='text-3xl md:text-4xl font-bold mb-4'>Our History</h2>
+        <p class='text-xl text-gray-600 max-w-3xl mx-auto'>
+          The journey of Andean Kingdom and our commitment to mountain
+          excellence.
         </p>
       </div>
-      
-      <div class="max-w-4xl mx-auto">
-        <div class="relative pl-8 sm:pl-16 py-6 group">
-          <div class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-7 before:h-full before:px-px before:bg-gray-300 before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-7 after:w-4 after:h-4 after:bg-primary-600 after:border-4 after:border-white after:rounded-full after:-translate-x-1/2 after:translate-y-1.5">
-            <time class="sm:w-28 text-xs text-gray-500 uppercase">1950</time>
+
+      <div class='max-w-3xl mx-auto'>
+        <div class='relative pl-8 sm:pl-16 py-6 group'>
+          <div
+            class='flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-7 before:h-full before:px-px before:bg-gray-300 before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-7 after:w-4 after:h-4 after:bg-primary-600 after:border-4 after:border-white after:rounded-full after:-translate-x-1/2 after:translate-y-1.5'
+          >
+            <time class='sm:w-28 text-xs text-gray-500 uppercase'>2015</time>
             <div>
-              <h3 class="text-xl font-bold text-gray-900">Church Founded</h3>
-              <p class="text-gray-700">
-                Our church was founded by a small group of dedicated believers who met in homes for Bible study and prayer.
+              <h3 class='text-xl font-bold text-gray-900'>
+                Andean Kingdom Founded
+              </h3>
+              <p class='text-gray-700'>
+                Born in Huaraz, Andean Kingdom started with a small team of
+                mountain lovers offering guided treks to Laguna 69 and Santa
+                Cruz.
               </p>
             </div>
           </div>
-          
-          <div class="relative pl-8 sm:pl-16 py-6 group">
-            <div class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-7 before:h-full before:px-px before:bg-gray-300 before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-7 after:w-4 after:h-4 after:bg-primary-600 after:border-4 after:border-white after:rounded-full after:-translate-x-1/2 after:translate-y-1.5">
-              <time class="sm:w-28 text-xs text-gray-500 uppercase">1965</time>
-              <div>
-                <h3 class="text-xl font-bold text-gray-900">First Building</h3>
-                <p class="text-gray-700">
-                  As the congregation grew, we purchased our first building and expanded our ministries to serve the community.
-                </p>
-              </div>
+        </div>
+
+        <div class='relative pl-8 sm:pl-16 py-6 group'>
+          <div
+            class='flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-7 before:h-full before:px-px before:bg-gray-300 before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-7 after:w-4 after:h-4 after:bg-primary-600 after:border-4 after:border-white after:rounded-full after:-translate-x-1/2 after:translate-y-1.5'
+          >
+            <time class='sm:w-28 text-xs text-gray-500 uppercase'>2017</time>
+            <div>
+              <h3 class='text-xl font-bold text-gray-900'>Expedition Growth</h3>
+              <p class='text-gray-700'>
+                We expanded into high-altitude climbing and logistical support
+                for international expeditions in the Cordillera Blanca and
+                Huayhuash.
+              </p>
             </div>
           </div>
-          
-          <div class="relative pl-8 sm:pl-16 py-6 group">
-            <div class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-7 before:h-full before:px-px before:bg-gray-300 before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-7 after:w-4 after:h-4 after:bg-primary-600 after:border-4 after:border-white after:rounded-full after:-translate-x-1/2 after:translate-y-1.5">
-              <time class="sm:w-28 text-xs text-gray-500 uppercase">1988</time>
-              <div>
-                <h3 class="text-xl font-bold text-gray-900">New Campus</h3>
-                <p class="text-gray-700">
-                  We moved to our current location and built a larger sanctuary to accommodate our growing congregation.
-                </p>
-              </div>
+        </div>
+
+        <div class='relative pl-8 sm:pl-16 py-6 group'>
+          <div
+            class='flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-7 before:h-full before:px-px before:bg-gray-300 before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-7 after:w-4 after:h-4 after:bg-primary-600 after:border-4 after:border-white after:rounded-full after:-translate-x-1/2 after:translate-y-1.5'
+          >
+            <time class='sm:w-28 text-xs text-gray-500 uppercase'>2020</time>
+            <div>
+              <h3 class='text-xl font-bold text-gray-900'>
+                Gear Rental Services
+              </h3>
+              <p class='text-gray-700'>
+                We launched a professional gear rental program to support
+                independent trekkers with tents, crampons, backpacks, and more.
+              </p>
             </div>
           </div>
-          
-          <div class="relative pl-8 sm:pl-16 py-6 group">
-            <div class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-7 before:h-full before:px-px before:bg-gray-300 before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-7 after:w-4 after:h-4 after:bg-primary-600 after:border-4 after:border-white after:rounded-full after:-translate-x-1/2 after:translate-y-1.5">
-              <time class="sm:w-28 text-xs text-gray-500 uppercase">2010</time>
-              <div>
-                <h3 class="text-xl font-bold text-gray-900">Community Center</h3>
-                <p class="text-gray-700">
-                  We opened our community center to better serve our neighbors through various outreach programs and ministries.
-                </p>
-              </div>
-            </div>
-          </div>
-          
-          <div class="relative pl-8 sm:pl-16 py-6 group">
-            <div class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-7 before:h-full before:px-px before:bg-gray-300 before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-7 after:w-4 after:h-4 after:bg-primary-600 after:border-4 after:border-white after:rounded-full after:-translate-x-1/2 after:translate-y-1.5">
-              <time class="sm:w-28 text-xs text-gray-500 uppercase">Present</time>
-              <div>
-                <h3 class="text-xl font-bold text-gray-900">Continuing the Mission</h3>
-                <p class="text-gray-700">
-                  Today, we continue to grow and adapt while staying true to our mission of knowing Christ and making Him known.
-                </p>
-              </div>
+        </div>
+
+        <div class='relative pl-8 sm:pl-16 py-6 group'>
+          <div
+            class='flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-7 before:h-full before:px-px before:bg-gray-300 before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-7 after:w-4 after:h-4 after:bg-primary-600 after:border-4 after:border-white after:rounded-full after:-translate-x-1/2 after:translate-y-1.5'
+          >
+            <time class='sm:w-28 text-xs text-gray-500 uppercase'>Present</time>
+            <div>
+              <h3 class='text-xl font-bold text-gray-900'>
+                Continuing Our Legacy
+              </h3>
+              <p class='text-gray-700'>
+                We remain dedicated to our core values, always striving to
+                improve and innovate in how we serve our clients and protect the
+                Andes.
+              </p>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-  
-  <!-- Leadership Team Preview -->
-  <section class="py-16 bg-gray-50">
-    <div class="container">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">Meet Our Leadership</h2>
-        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-          Our dedicated staff and leadership team serve our congregation with passion and commitment
-        </p>
-      </div>
-      
-      <!-- Show limited staff preview -->
-      <StaffList showAll={false} limit={3} />
-      
-      <div class="mt-12 text-center">
-        <a 
-          href="/staff" 
-          class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-white bg-primary-600 rounded-md shadow-sm hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
-        >
-          Meet All Our Staff
-        </a>
-      </div>
-    </div>
-  </section>
-  
-  <!-- Statement of Faith -->
-  <section class="py-16">
-    <div class="container">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">What We Believe</h2>
-        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-          Our church adheres to these fundamental Christian beliefs
-        </p>
-      </div>
-      
-      <div class="max-w-4xl mx-auto prose prose-lg">
-        <h3>The Bible</h3>
-        <p>
-          We believe the Bible is God's Word, inspired by the Holy Spirit, without error in the original manuscripts, and the final authority for all Christian faith and life.
-        </p>
-        
-        <h3>God</h3>
-        <p>
-          We believe in one God who exists eternally in three persons: Father, Son, and Holy Spirit. Each person is fully God, yet there is one God.
-        </p>
-        
-        <h3>Jesus Christ</h3>
-        <p>
-          We believe Jesus Christ is fully God and fully human. He was born of a virgin, lived a sinless life, died on the cross as the substitute for sinners, rose bodily from the grave, and ascended to heaven where He now serves as our High Priest and Advocate.
-        </p>
-        
-        <h3>Holy Spirit</h3>
-        <p>
-          We believe the Holy Spirit convicts the world of sin, regenerates believers, indwells them, and empowers them for godly living and service.
-        </p>
-        
-        <h3>Salvation</h3>
-        <p>
-          We believe salvation is by grace alone, through faith alone, in Christ alone. Good works are the necessary fruit of true faith but are not the basis of our right standing before God.
-        </p>
-        
-        <h3>The Church</h3>
-        <p>
-          We believe the church is the body of Christ, consisting of all true believers. Its mission is to worship God, build up believers in their faith, and share the gospel with the world.
-        </p>
-        
-        <h3>The Future</h3>
-        <p>
-          We believe in the personal, visible return of Jesus Christ, the resurrection of the dead, the final judgment, and the eternal state of blessing for the righteous and punishment for the unrighteous.
-        </p>
-      </div>
-    </div>
-  </section>
+  <!-- Show limited staff preview -->
+  <StaffList showAll={false} limit={3} />
 </BaseLayout>

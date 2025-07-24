@@ -1,0 +1,123 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHeader from "../components/Sections/PageHeader.astro";
+import Button from "../components/UI/Button.astro";
+import CallToAction from "../components/Sections/CallToAction.astro";
+---
+
+<BaseLayout
+  title="Frequently Asked Questions"
+  description="Answers to common questions from your adventure"
+>
+  <PageHeader 
+    title="Frequently Asked Questions" 
+    subtitle="Answers to common questions from your adventure"
+    backgroundImage="/uploads/faq/faq-header-bg.webp"
+  />
+  
+  <!-- What to Expect -->
+  <section class="py-16">
+    <div class="container">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">What to Expect</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Here's what you can expect when you visit us for the first time
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="text-center p-6">
+          <div class="w-20 h-20 mx-auto mb-4 rounded-full bg-primary-100 flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Personalized Adventure Planning</h3>
+          <p class="text-gray-700">
+            From the moment you arrive, our expert staff will help you choose the best treks, climbs, or expeditions based on your goals, experience, and time. Whether you're here for a day hike or a full expedition, we’ll guide you every step of the way.
+          </p>
+        </div>
+        
+        <div class="text-center p-6">
+          <div class="w-20 h-20 mx-auto mb-4 rounded-full bg-primary-100 flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-secondary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />
+            </svg>
+
+          </div>
+          <h3 class="text-xl font-bold mb-3">Top Quality Gear Rentals</h3>
+          <p class="text-gray-700">
+            We offer well maintained, high-performance gear for trekking, mountaineering, and camping — including tents, sleeping bags, crampons, and more. Everything is ready for the high Andes.
+          </p>
+        </div>
+        
+        <div class="text-center p-6">
+          <div class="w-20 h-20 mx-auto mb-4 rounded-full bg-primary-100 flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Local Knowledge & Honest Advice</h3>
+          <p class="text-gray-700">
+            Our team lives and breathes the Cordillera Blanca. You’ll get up-to-date trail info, honest safety tips, and real insight into local conditions, no sales pressure, just support.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- FAQ Section -->
+  <section id="faq" class="py-16 bg-gray-50">
+  <div class="container">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">Frequently Asked Questions</h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Answers to common questions from first-time visitors
+      </p>
+    </div>
+
+    <div class="max-w-4xl mx-auto">
+      <div class="space-y-4">
+        <details class="group bg-white p-6 rounded-lg shadow-sm">
+          <summary class="flex justify-between items-center cursor-pointer">
+            <h3 class="text-xl font-bold">Do I need to book in advance for equipment rentals or guided treks?</h3>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 transform transition-transform duration-200 group-open:rotate-45" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+            </svg>
+          </summary>
+          <p class="mt-4 text-gray-700">
+            We recommend booking in advance during the high season (May–September), especially for popular routes like Santa Cruz or expeditions to Alpamayo. However, we often have last-minute availability — just ask!
+          </p>
+        </details>
+
+        <details class="group bg-white p-6 rounded-lg shadow-sm">
+          <summary class="flex justify-between items-center cursor-pointer">
+            <h3 class="text-xl font-bold">What kind of gear can I rent from your shop?</h3>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 transform transition-transform duration-200 group-open:rotate-45" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+            </svg>
+          </summary>
+          <p class="mt-4 text-gray-700">
+          We rent high-quality trekking and mountaineering equipment: tents, sleeping bags, mats, stoves, crampons, ice axes, helmets, harnesses, and more. All our gear is regularly inspected and ready for high-altitude conditions.
+          </p>
+        </details>
+
+        <details class="group bg-white p-6 rounded-lg shadow-sm">
+          <summary class="flex justify-between items-center cursor-pointer">
+            <h3 class="text-xl font-bold">I’ve never been at high altitude before — is acclimatization necessary?</h3>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 transform transition-transform duration-200 group-open:rotate-45" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+            </svg>
+          </summary>
+          <p class="mt-4 text-gray-700">
+            Yes! We always recommend spending at least 2–3 days in Huaraz before starting any major trek or climb. We’re happy to suggest short acclimatization hikes to help you adjust safely.
+          </p>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+  
+  <!-- Contact Us -->
+  <CallToAction />
+</BaseLayout>

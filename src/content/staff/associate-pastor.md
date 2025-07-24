@@ -1,34 +1,32 @@
 ---
-name: "Rev. Sarah Martinez"
-title: "Associate Pastor & Women's Ministry Director"
-image: "/uploads/staff/sarah-martinez.webp"
-email: "sarah.martinez@churchname.org"
-phone: "+1-555-0102"
-bio: "Pastor Sarah leads our women's ministry and provides pastoral care with a heart for discipleship and community building."
-order: 2
+name: "Luis 'Chaski' Ramírez"
+title: "Senior High-Altitude Guide"
+image: "/uploads/staff/john-smith.webp"
+email: "luis.ramirez@andeanexpeditions.org"
+phone: "+54-261-555-1010"
+bio: "Chaski is a seasoned high-altitude guide known for his calm leadership and deep knowledge of the Andes."
+order: 1
 draft: false
 ---
 
-Rev. Sarah Martinez joined our pastoral team in 2019, bringing extensive experience in women's ministry and pastoral care. She holds a Master of Divinity from Christian Seminary and is passionate about discipleship.
+Luis “Chaski” Ramírez has over 20 years of experience guiding climbers on Aconcagua and other major Andean peaks. He holds certifications from UIAGM and the Argentine Mountain Guides Association. Known for his resilience and cultural insight, he’s a mentor to many in the expedition team.
 
-## Ministry Areas
+## Climbing Focus
 
-- Women's ministry leadership
-- Small group coordination
-- Pastoral counseling
-- New member integration
-- Marriage and family ministry
+- Aconcagua expeditions
+- Glacier navigation & rope techniques
+- Altitude acclimatization strategies
+- Emergency response & risk management
+- Team leadership at high elevation
 
-## Vision for Women's Ministry
+## Guiding Philosophy
 
-Pastor Sarah envisions a thriving women's ministry that:
-- Builds authentic relationships
-- Provides biblical teaching and discipleship
-- Supports women in all life stages
-- Encourages service and outreach
+Chaski believes mountain guiding is about:
+- Earning trust through consistency
+- Balancing challenge and safety
+- Sharing local traditions and stories
+- Helping climbers push past perceived limits
 
 ## Background
 
-Before joining our staff, Pastor Sarah served in various ministry roles including youth pastor and missions coordinator. She is married to Carlos and they have two teenage daughters.
-
-Contact Pastor Sarah for women's ministry involvement, small group information, or pastoral care.
+Born in Mendoza, Luis grew up hiking the foothills of the Andes. Before joining the team, he worked as a porter, cook, and assistant guide. When not guiding, he teaches safety courses and volunteers with mountain rescue teams. He's fluent in Spanish, English, and Quechua.

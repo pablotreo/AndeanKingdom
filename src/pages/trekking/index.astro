@@ -16,10 +16,10 @@ const trekking = all.sort((a, b) =>
 );
 ---
 
-<BaseLayout title="Explore Our Expeditions">
+<BaseLayout title="Explore Our Trekking in Huaraz">
   <PageHeader
-    title="Explore Our Expeditions"
-    subtitle="Discover all our guided adventures, from classic treks to technical climbs in the heart of the Andes"
+    title="Explore Our Trekking"
+    subtitle="Discover all our guided trekking,for all levels, in the heart of the Cordillera Blanca"
     backgroundImage="/uploads/trekking/huayhuash.jpg"
   />
 
@@ -28,7 +28,7 @@ const trekking = all.sort((a, b) =>
       <div class="text-center mb-12">
         <h2 class="text-3xl md:text-4xl font-bold mb-4">Find Your Next Adventure</h2>
         <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-          Browse our full range of guided expeditions across the Cordillera Blanca
+          Browse our full range of guided trekking across the Cordillera Blanca
         </p>
       </div>
 
@@ -39,7 +39,7 @@ const trekking = all.sort((a, b) =>
             href={`/trekking/${m.slug}`}
             data={{
               ...m.data,
-              summary: m.data.summary ?? ""
+              summary: m.data.summary ?? "Andean Kingdom offers a variety of trekking experiences in the Cordillera Blanca, perfect for all adventure seekers."
             }}
           />
         ))}

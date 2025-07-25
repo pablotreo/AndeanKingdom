@@ -67,6 +67,24 @@ const mountaineeringCollection = defineCollection({
   }),
 });
 
+const trekkingCollection = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    subtitle: z.string(),
+    image: z.string().startsWith('/uploads/trekking/').optional(),
+    summary: z.string().optional(), 
+    dates: z.string().optional(),
+    duration: z.string().optional(), 
+    season: z.string().optional(),
+    difficulty: z.string().optional(),
+    videoUrl: z.string().url().optional(),
+    pax: z.string().optional(),
+    order: z.number().optional(),
+    draft: z.boolean().default(false),
+  }),
+});
+
 const blogCollection = defineCollection({
   type: 'content',
   schema: z.object({
@@ -96,6 +114,7 @@ export const collections = {
   events: eventsCollection,
   sermons: sermonsCollection,
   mountaineering: mountaineeringCollection,
+  trekking: trekkingCollection,
   blog: blogCollection,
   siteInfo: siteInfoCollection,
 };

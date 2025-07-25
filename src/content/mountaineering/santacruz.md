@@ -1,7 +1,7 @@
 ---
 title: 'SANTA CRUZ'
 subtitle: 'Four days among mountains, lakes, and snowy peaks'
-slug: 'santa cruz'
+slug: 'santacruz'
 image: '/uploads/mountaineering/santa-cruz.jpg'
 summary: 'Experience one of the most scenic treks in the Cordillera Blanca, crossing valleys, lakes, and high mountain passes.'
 dates: '4 days and 3 nights'

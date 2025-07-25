@@ -2,7 +2,7 @@
 title: 'AKILPO - ISHINCA'
 subtitle: 'This is a fantastic trekking!'
 slug: 'akilpo-ishinca'
-image: '/uploads/mountaineering/akiilpo-ishinca.webp'
+image: '/uploads/trekking/akiilpo-ishinca.webp'
 summary: 'It begins in the ruins of Joncopamapa (3400 mts) and then you get to Akilpo Valley'
 dates: '3 days'
 season: 'May - August'

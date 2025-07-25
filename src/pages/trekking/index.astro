@@ -4,13 +4,13 @@ import PageHeader from "../../components/Sections/PageHeader.astro";
 import ExpeCard from "../../components/UI/ExpeCard.astro";
 import { getCollection } from "astro:content";
 
-// Trae la colección desde "content/mountaineering/*.md"
-const all = await getCollection("mountaineering", ({ data }) =>
+// Trae la colección desde "content/trekking/*.md"
+const all = await getCollection("trekking", ({ data }) =>
   import.meta.env.PROD ? !data.draft : true
 );
 
 // Ordena por campo personalizado o título
-const mountaineering = all.sort((a, b) =>
+const trekking = all.sort((a, b) =>
   (a.data.order ?? 0) - (b.data.order ?? 0) ||
   a.data.title.localeCompare(b.data.title)
 );
@@ -20,7 +20,7 @@ const mountaineering = all.sort((a, b) =>
   <PageHeader
     title="Explore Our Expeditions"
     subtitle="Discover all our guided adventures, from classic treks to technical climbs in the heart of the Andes"
-    backgroundImage="/uploads/mountaineering/huayhuash.jpg"
+    backgroundImage="/uploads/trekking/huayhuash.jpg"
   />
 
   <section class="py-16 bg-white">
@@ -33,11 +33,10 @@ const mountaineering = all.sort((a, b) =>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {mountaineering.map(m => (
+        {trekking.map(m => (
           <ExpeCard
-          
             slug={m.slug}
-            href={`/mountaineering/${m.slug}`}
+            href={`/trekking/${m.slug}`}
             data={{
               ...m.data,
               summary: m.data.summary ?? ""

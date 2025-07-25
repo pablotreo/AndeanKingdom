@@ -1,43 +1,42 @@
 ---
-title: "Youth Winter Retreat 2025: Unshakeable Faith"
-date: 2025-02-14
-endDate: 2025-02-16
-time: "Departure: 4:00 PM Friday | Return: 2:00 PM Sunday"
-location: "Mountain View Retreat Center"
-image: "/uploads/events/winter-retreat-2025.webp"
-summary: "A transformative weekend of worship, fellowship, and winter fun for students grades 6-12."
-tags: ["youth", "retreat", "winter"]
+title: "Andean Kingdom Expedition: Trekking Through Patagonia"
+date: 2025-06-05
+endDate: 2025-06-05
+time: "7:00 AM - 4:00 PM"
+location: "Torres del Paine National Park, Chile"
+image: "/uploads/events/easter-celebration.webp"
+summary: "Explore the stunning landscapes of Patagonia with a guided trek through Torres del Paine National Park."
+tags: ["trekking", "Patagonia", "adventure", "nature"]
 registrationRequired: true
-registrationLink: "https://example.com/winter-retreat-2025"
+registrationLink: "https://example.com/andes-expedition"
 draft: false
 ---
 
-## About the Retreat
+## Trekking in the Heart of Patagonia
 
-Join us for an unforgettable weekend as we explore what it means to have an unshakeable faith in Jesus Christ. Through dynamic worship, engaging messages, small group discussions, and winter activities, students will be challenged and encouraged in their faith journey.
+Join us on an unforgettable trek through the majestic Torres del Paine National Park. Experience the natural beauty of Patagonia with a guided tour of its stunning landscapes.
 
-### Schedule Highlights
+### Trekking Itinerary
 
-- **Friday Evening**: Arrival, dinner, opening session
-- **Saturday**: Morning worship, workshops, winter activities, evening worship
-- **Sunday**: Closing session, lunch, departure
+**Start Trek**
+- Location: Torres del Paine National Park
+- Time: 7:00 AM
+
+**Scenic Stops**
+- Location: Throughout the park
+- Time: 9:00 AM - 2:00 PM
+
+**Return to Base Camp**
+- Time: 3:00 PM - 4:00 PM
 
 ### What to Bring
 
-- Bible and journal
-- Warm winter clothing
-- Sleeping bag and pillow
-- Personal toiletries
-- Spending money for snack shop
+- Comfortable trekking shoes
+- Light layers and sun protection
+- Water bottle and lunch (snacks provided)
 
-### Cost
+### Registration
 
-- Early Bird (before Jan 15): $175
-- Regular Registration: $195
-- Scholarships available - contact Pastor Michael
+Please register by May 30th for this incredible Patagonian adventure.
 
-### Registration Details
-
-Space is limited to 100 students. Register early to secure your spot!
-
-*Parent/guardian permission form required for all participants.*
+*Refreshments and guided tour included*

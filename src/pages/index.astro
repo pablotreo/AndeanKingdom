@@ -1,11 +1,13 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ExpeList from "../components/Sections/ExpeList.astro";
-import Button from "../components/UI/Button.astro";
 import HeroVideo from '../components/Sections/HeroVideo.astro';
 import ButtonArrow from "../components/UI/ButtonArrow.astro";
 import CallToAction from "../components/Sections/CallToAction.astro";
 import Testimonial from "../components/Sections/Testimonial.astro";
+
+import { Image } from 'astro:assets';
+import myImage from '../assets/images/aboutUs.jpg';
 ---
 
 <BaseLayout>
@@ -17,11 +19,17 @@ import Testimonial from "../components/Sections/Testimonial.astro";
     <div class="container">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <div>
-          <img 
+          <!-- <img 
             src="/uploads/home/aboutUs.jpg" 
             alt="Andean Kingdom Team" 
             class="rounded-sm shadow-xl object-cover w-full h-full"
-          />
+          /> -->
+          <Image 
+            src={myImage} 
+            widths={[240, 540, 720, myImage.width]}
+            sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px, ${myImage.width}px`}
+            alt="Andean Kingdom Team" 
+            class="rounded-sm shadow-xl"/>
         </div>
         
         <div>
@@ -49,11 +57,14 @@ import Testimonial from "../components/Sections/Testimonial.astro";
 
   <!-- Testimonials-->
   <section class="py-16 bg-gray-50">
-
     <Testimonial />  
-      
   </section>
   
+  <!-- CallToAction-->
   <CallToAction />
+
+  <section class="py-48 bg-gray-50">
+
+  </section>
 
 </BaseLayout>

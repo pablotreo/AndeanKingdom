@@ -4,6 +4,13 @@ import PageHeader from "../../components/Sections/PageHeader.astro";
 import ExpeCard from "../../components/UI/ExpeCard.astro";
 import { getCollection } from "astro:content";
 
+// import Slider from "../../components/UI/Slider.astro";
+
+const images = [
+  "/uploads/mountaineering/huayhuash.jpg",
+  "/uploads/mountaineering/huascaran.jpg",
+];
+
 // Trae la colección desde "content/mountaineering/*.md"
 const all = await getCollection("mountaineering", ({ data }) =>
   import.meta.env.PROD ? !data.draft : true
@@ -47,4 +54,5 @@ const mountaineering = all.sort((a, b) =>
       </div>
     </div>
   </section>
+<!-- <Slider images={images} /> -->
 </BaseLayout>

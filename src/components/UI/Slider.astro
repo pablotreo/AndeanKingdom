@@ -1,0 +1,59 @@
+---
+const { images = [] } = Astro.props;
+const sliderId = "slider-635699";
+---
+
+<div class="relative">
+  <!-- Contenedor deslizable -->
+  <div
+    id={sliderId}
+    class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar"
+  >
+    {images.map((img, i) => (
+      <div class="min-w-full h-[80vh] snap-start relative" key={i}>
+        <img src={img} alt={`Slide ${i + 1}`} class="w-full h-full object-cover" />
+      </div>
+    ))}
+  </div>
+
+  <!-- Flechas -->
+  <button
+    type="button"
+    class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white/70 hover:bg-white text-black rounded-full p-2 z-10"
+    onClick={`(function(){
+      const el = document.getElementById('${sliderId}');
+      el.scrollBy({ left: -window.innerWidth, behavior: 'smooth' });
+    })()`}
+    aria-label="Anterior"
+  >
+    ‹
+  </button>
+  <button
+    type="button"
+    class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white/70 hover:bg-white text-black rounded-full p-2 z-10"
+    onClick={`(function(){
+      const el = document.getElementById('${sliderId}');
+      el.scrollBy({ left: window.innerWidth, behavior: 'smooth' });
+    })()`}
+    aria-label="Siguiente"
+  >
+    ›
+  </button>
+
+  <!-- Autoplay infinito -->
+  <script>
+    setInterval(() => {
+      const el = document.getElementById("{sliderId}");
+      if (!el) return;
+
+      const scrollAmount = window.innerWidth;
+      const maxScroll = el.scrollWidth - el.clientWidth;
+
+      if (Math.round(el.scrollLeft) >= maxScroll) {
+        el.scrollTo({ left: 0, behavior: "smooth" });
+      } else {
+        el.scrollBy({ left: scrollAmount, behavior: "smooth" });
+      }
+    }, 5000);
+  </script>
+</div>

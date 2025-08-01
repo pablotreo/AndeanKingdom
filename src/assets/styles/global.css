@@ -21,6 +21,22 @@
     /* @apply scroll-smooth; */
   }
   
+  /* Si Lenis no se carga magia por aca */
+  body.lenis-enabled .fade-in {
+  transition: all 0.5s ease;
+  }
+  body.lenis-enabled::after {
+    content: "Lenis activo";
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    background: limegreen;
+    color: black;
+    padding: 4px 8px;
+    font-size: 12px;
+    z-index: 9999;
+  } 
+  
   body {
     @apply font-sans text-gray-800 bg-gray-50;
   }

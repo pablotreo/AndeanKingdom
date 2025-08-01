@@ -1,5 +1,5 @@
 // src/utils/lenis.js
-import Lenis from '@studio-freight/lenis'
+import Lenis from 'lenis'
 
 const lenis = new Lenis({
   smooth: true,
@@ -13,5 +13,3 @@ function raf(time) {
 }
 
 requestAnimationFrame(raf)
-
-export default lenis

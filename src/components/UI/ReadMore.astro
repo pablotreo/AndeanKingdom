@@ -1,0 +1,94 @@
+---
+const { collapsedHeight = '14rem', color = 'text-color-secondary', fadeColor = '#fafafaf' } = Astro.props;
+---
+
+<div class="readmore relative text-color-secondary leading-relaxed">
+  <div
+    class="readmore-content overflow-hidden transition-[max-height] duration-700 ease-in-out relative"
+    style={`max-height:${collapsedHeight}`}
+    data-state="collapsed"
+  >
+    <div class="readmore-inner transition-opacity duration-700 ease-in-out opacity-100">
+      <slot />
+    </div>
+
+    <!-- Gradiente fade -->
+    <div
+      class="fade absolute bottom-0 left-0 w-full h-12 pointer-events-none transition-opacity duration-700"
+      style={`background: linear-gradient(to top, ${fadeColor}, transparent); opacity: 1;`}
+    ></div>
+  </div>
+  <div class="flex justify-center">
+    <button
+      type="button"
+      class="mt-3 flex flex-col items-center font-medium select-none"
+      style={`color:${color}`}
+      data-toggle
+    >
+      <span class="symbol text-4xl leading-none">+</span>
+      <span class="label text-sm text-color-primary">READ MORE</span>
+    </button>
+  </div>
+</div>
+
+<script>
+  // --- función central ---
+  function initReadMore(block) {
+    const btn = block.querySelector("[data-toggle]");
+    const content = block.querySelector(".readmore-content");
+    const inner = block.querySelector(".readmore-inner");
+    const fade = block.querySelector(".fade");
+    const symbol = btn.querySelector(".symbol");
+    const label = btn.querySelector(".label");
+    const collapsed = parseFloat(getComputedStyle(content).maxHeight);
+
+    // recalcula la altura y decide si mostrar el botón
+    const refresh = () => {
+      const fullHeight = content.scrollHeight;
+      if (fullHeight <= collapsed + 20) {
+        btn.style.display = "none";
+        fade.style.display = "none";
+      } else {
+        btn.style.display = "inline-flex";
+        fade.style.display = "block";
+      }
+    };
+
+    refresh(); // intentar medir una vez (en caso de visible)
+
+    btn.onclick = () => {
+      const expanded = content.dataset.state === "expanded";
+      if (expanded) {
+        inner.style.opacity = "0.85";
+        fade.style.opacity = "1";
+        content.style.maxHeight = content.scrollHeight + "px";
+        requestAnimationFrame(() => (content.style.maxHeight = collapsed + "px"));
+        content.dataset.state = "collapsed";
+        symbol.textContent = "+";
+        label.textContent = "READ MORE";
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+        inner.style.opacity = "1";
+        fade.style.opacity = "0";
+        content.dataset.state = "expanded";
+        symbol.textContent = "–";
+        label.textContent = "READ LESS";
+      }
+    };
+
+    // guardar función para reinicializar
+    block.refreshReadMore = refresh;
+  }
+
+  // inicializar todos los visibles
+  document.querySelectorAll(".readmore").forEach(initReadMore);
+
+  // cuando un tab se muestra → volver a medir el contenido dentro
+  document.addEventListener("tab:shown", (e) => {
+    const panel = e.target.closest("[data-panel]") || e.target;
+    if (!panel) return;
+    panel.querySelectorAll(".readmore").forEach((block) => {
+      if (typeof block.refreshReadMore === "function") block.refreshReadMore();
+    });
+  });
+</script>

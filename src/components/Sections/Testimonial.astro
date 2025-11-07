@@ -1,65 +1,97 @@
 ---
 const testimonials = [
-  { name: "John Perez", text: "Excellent service, highly recommendable. Ut et sint aliquip ea sit duis enim in in proident culpa nisi culpa.", link: "https://example.com/testimonial1" },
-  { name: "Ana Garcia", text: "I loved the experience, I'll definitely return. Commodo sit et sit nisi ex irure quis minim.", link: "https://example.com/testimonial2" },
-  { name: "Carlos Lopez", text: "Incredible service, the best place. Incredible service, the best place. Incredible service, the best place. Incredible service, the best place. Incredible service, the best place.", link: "https://example.com/testimonial3" },
-  { name: "Laura Martinez", text: "An unforgettable experience, 100% recommendable.", link: "https://example.com/testimonial4" },
-  { name: "David Gonzalez", text: "The best in town, first-class attention. Eu culpa enim veniam mollit.Eiusmod nisi duis irure aliqua officia anim.", link: "https://example.com/testimonial5" },
-  { name: "Sofia Rodriguez", text: "Impressive quality. I'll definitely come back.", link: "https://example.com/testimonial6" },
+  { name: "John Perez", text: "Excellent service, highly recommendable. An unforgettable experience, 100% recommendable. An unforgettable experience, 100% recommendable", link: "#" },
+  { name: "Ana Garcia", text: "I loved the experience, I'll definitely return.", link: "#" },
+  { name: "Carlos Lopez", text: "Incredible service, the best place.", link: "#" },
+  { name: "Laura Martinez", text: "An unforgettable experience, 100% recommendable. An unforgettable experience, 100% recommendable", link: "#" },
+  { name: "David Gonzalez", text: "The best in town, first-class attention. An unforgettable experience, 100% recommendable. An unforgettable experience, 100% recommendable", link: "#" },
+  { name: "Sofia Rodriguez", text: "Impressive quality. I'll definitely come back. An unforgettable experience, 100% recommendable. An unforgettable experience, 100% recommendable", link: "#" },
 ];
 ---
 
 <div class="max-w-6xl mx-auto py-12">
-  <!-- Title and Subtitle in English -->
   <h2 class="text-4xl font-bold text-center mb-4">What Our Customers Say</h2>
   <p class="text-xl text-center mb-12">Discover why people trust us with their experiences</p>
-  
-  <!-- Testimonials in a single container for animation -->
-  <div id="testimonialsContainer" class="relative overflow-hidden">
-    <div id="testimonialGroup" class="flex">
-      <!-- All Testimonials in a single container -->
-      {testimonials.map((testimonial, index) => (
-        <div
-          class="bg-white p-6 rounded-lg w-1/3 flex-shrink-0 transform transition-all duration-700 mx-4 my-4 border border-gray-300"
-        >
-          <p class="text-lg text-gray-700 mb-4">
-            "{testimonial.text}" 
-            <a href={testimonial.link} target="_blank" class="text-color-secondary hover:underline">Read more</a>
-          </p>
-          <p class="font-semibold text-gray-900 text-right">- {testimonial.name}</p>
-        </div>
-      ))}
-    </div>
+
+  <div
+    id="testimonialsContainer"
+    class="relative overflow-x-auto flex gap-4 snap-x snap-mandatory scroll-smooth px-4 pb-4 cursor-grab active:cursor-grabbing select-none"
+  >
+    {testimonials.map((t) => (
+      <div
+        class="bg-white p-6 rounded-lg flex-shrink-0 border border-gray-300 snap-center 
+               w-[90vw] sm:w-[45vw] md:w-[30vw] transition-transform duration-500"
+      >
+        <p class="text-lg text-gray-700 mb-4">
+          "{t.text}"
+          <a href={t.link} target="_blank" class="text-color-secondary hover:underline">Read more</a>
+        </p>
+        <p class="font-semibold text-gray-900 text-right">- {t.name}</p>
+      </div>
+    ))}
   </div>
 </div>
 
 <style>
+  /* Ocultar scrollbar */
   #testimonialsContainer {
-    width: 100%;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
   }
-
-  #testimonialGroup {
-    display: flex;
-    animation: slideLeft 20s linear infinite;
-  }
-
-  /* Continuous sliding animation to the left */
-  @keyframes slideLeft {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
-  }
-
-  /* Pause animation on hover */
-  #testimonialsContainer:hover #testimonialGroup {
-    animation-play-state: paused;
-  }
-
-  /* Resume animation when mouse leaves */
-  #testimonialsContainer:not(:hover) #testimonialGroup {
-    animation-play-state: running;
+  #testimonialsContainer::-webkit-scrollbar {
+    display: none;
   }
 </style>
+
+<script is:inline>
+  const container = document.getElementById('testimonialsContainer');
+  let isDown = false;
+  let startX;
+  let scrollLeft;
+  let userInteracting = false;
+  let autoScroll;
+
+  // Drag con mouse
+  container.addEventListener('mousedown', (e) => {
+    isDown = true;
+    userInteracting = true;
+    container.classList.add('active');
+    startX = e.pageX - container.offsetLeft;
+    scrollLeft = container.scrollLeft;
+  });
+  container.addEventListener('mouseleave', () => {
+    isDown = false;
+    userInteracting = false;
+    container.classList.remove('active');
+  });
+  container.addEventListener('mouseup', () => {
+    isDown = false;
+    userInteracting = false;
+    container.classList.remove('active');
+  });
+  container.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - container.offsetLeft;
+    const walk = (x - startX) * 1.2; // velocidad
+    container.scrollLeft = scrollLeft - walk;
+  });
+
+  // Touch events (ya funcionan nativos)
+  container.addEventListener('touchstart', () => (userInteracting = true));
+  container.addEventListener('touchend', () => (userInteracting = false));
+
+  // Auto scroll
+  function startAutoScroll() {
+    autoScroll = setInterval(() => {
+      if (!userInteracting) {
+        if (container.scrollLeft + container.clientWidth >= container.scrollWidth - 10) {
+          container.scrollTo({ left: 0, behavior: 'smooth' });
+        } else {
+          container.scrollBy({ left: container.clientWidth / 2, behavior: 'smooth' });
+        }
+      }
+    }, 4000);
+  }
+  startAutoScroll();
+</script>

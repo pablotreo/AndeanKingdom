@@ -1,0 +1,59 @@
+---
+interface Tab { id: string; label: string; }
+const { tabs, initial = 0 } = Astro.props as { tabs: Tab[]; initial?: number };
+---
+
+<section class="w-full" id="tabs">
+  <div class="flex gap-x-6 justify-start flex-wrap">
+    {tabs.map((t, i) => (
+      <button
+        class={`tab-btn text-2xl inline-flex items-center justify-center py-1 border-b-4 border-transparent font-medium transition-colors
+        ${i === initial ? 'text-color-secondary border-color-secondary' : 'text-color-primary hover:text-color-secondary'}`}
+        data-tab={t.id}
+        aria-selected={i === initial ? 'true' : 'false'}
+        type="button"
+      >
+        {t.label}
+      </button>
+    ))}
+  </div>
+  <div class="mt-6">
+    <slot />
+  </div>
+</section>
+
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", () => {
+    const root = document.querySelector("#tabs");
+    if (!root) return;
+
+    const btns = root.querySelectorAll(".tab-btn");
+    const panels = root.querySelectorAll("[data-panel]");
+
+    function activate(tab) {
+      btns.forEach((b) => {
+        const active = b.dataset.tab === tab;
+        b.setAttribute("aria-selected", active ? "true" : "false");
+        b.classList.toggle("text-color-secondary", active);
+        b.classList.toggle("border-color-secondary", active);
+        b.classList.toggle("hover:text-color-secondary", !active);
+        b.classList.toggle("text-color-primary", !active);
+        b.classList.toggle("border-transparent", !active);
+      });
+
+      panels.forEach((p) => {
+        const show = p.dataset.panel === tab;
+        const wasHidden = p.hidden;
+        p.hidden = !show;
+        // Si pasó de hidden -> visible, dispara evento para que los hijos recalculen alturas
+        if (show && wasHidden) {
+          p.dispatchEvent(new CustomEvent("tab:shown", { bubbles: true }));
+        }
+      });
+    }
+
+    btns.forEach((b) => b.addEventListener("click", () => activate(b.dataset.tab)));
+    const first = [...btns].find((b) => b.getAttribute("aria-selected") === "true") || btns[0];
+    activate(first.dataset.tab);
+  });
+</script>

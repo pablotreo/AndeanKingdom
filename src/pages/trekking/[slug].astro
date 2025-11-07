@@ -2,7 +2,9 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHeader from '../../components/Sections/PageHeader.astro';
 import Button from '../../components/UI/Button.astro';
+import Recomendation from '../../content/trekking/recomendation.astro';
 import { getCollection } from 'astro:content';
+
 
 // Generate static paths for all trekking
 export async function getStaticPaths() {
@@ -43,7 +45,7 @@ const { Content } = await entry.render();
     backgroundImage={entry.data.image || '/uploads/huascaran.jpg'}
   />
 
-  <section class='py-16'>
+  <section class='pb-20 md:pt-20 md:pb-32'> 
     <div class='container'>
       <div class='grid grid-cols-1 lg:grid-cols-3 gap-12'>
         <!-- Main Content -->
@@ -155,14 +157,15 @@ const { Content } = await entry.render();
           </div>
 
           <div
-            class='prose prose-lg max-w-none prose-headings:text-gray-900 prose-h2:text-2xl prose-h3:text-xl prose-h4:text-lg prose-p:text-gray-700 prose-li:text-gray-700 prose-strong:text-gray-900'
+            class='prose prose-lg max-w-none prose-headings:text-color-primary prose-h2:text-2xl prose-h3:text-xl prose-h4:text-lg prose-p:text-gray-700 prose-li:text-gray-700 prose-strong:text-color-primary'
           >
             <Content />
           </div>
+          
         </div>
 
         <!-- Sidebar -->
-        <div class='max-w-xs mx-auto lg:mx-0'>
+        <div class='w-full max-w-full lg:max-w-xs mx-auto lg:mx-0'>
           <div class='bg-gray-50 p-6 rounded-sm sticky top-16'>
             <div class='flex flex-col space-y-3'>
               <Button href='/contact' variant='primary' size='lg'>
@@ -223,4 +226,13 @@ const { Content } = await entry.render();
       </div>
     </div>
   </section>
+  <section class='pt-8 pb-20 md:pt-20 md:pb-24 bg-white'>
+    <div class='container'>
+      <div>
+        <Recomendation />
+      </div>
+    </div>
+  </section>
+
+    
 </BaseLayout>

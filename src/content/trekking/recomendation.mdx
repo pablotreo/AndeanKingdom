@@ -1,0 +1,82 @@
+---
+import Tabs from "../../components/UI/Tabs.astro";
+import ReadMore from "../../components/UI/ReadMore.astro";
+---
+
+<div class="mt-16 mb-12">
+  <Tabs class="my-36"
+    tabs={[
+      { id: "include", label: "OUR PRICE INCLUDES" },
+      { id: "notinclude", label: "DOES NOT INCLUDE" },
+    ]}
+  >
+    <div data-panel="include">
+      <ReadMore collapsedHeight="14rem" fadeColor="#ffffff">
+        <p>
+          ✔︎ Bilingual Certified Guide: A local expert who will accompany you throughout the tour, explaining the flora, fauna, culture, and geography of the area. They speak both Spanish and English.  
+          ✔︎ Cook: They will be in charge of preparing delicious hot meals at the campsite, including vegetarian options.  
+          ✔︎ Assistant: They will help the guide with all tasks, ensuring that your experience is comfortable and safe.  
+          ✔︎ Round-trip private transportation: We will pick you up and drop you off at your hotel in Huaraz, and transport you to the start and end of the trek.  
+          ✔︎ Camping equipment: Everything you need to camp comfortably: individual tents for each person, sleeping bags that will keep you warm, sleeping mats, a tent for cooking and eating, chairs, tables, pots, plates, cutlery, and more. We also include a power bank and solar panel to charge your electronic devices.  
+          ✔︎ Personal equipment: We will provide you with the basics for the trek: waterproof bags for your belongings, backpacks, rain and warm clothes, a buff (multifunctional scarf), trekking poles, a headlamp, and gloves.  
+          ✔︎ Four daily meals: Breakfast, lunch, afternoon snack, and dinner during the trek. If you are vegetarian, don't worry, we have options for you.  
+          ✔︎ Donkeys: They will transport all the camping equipment and part of your personal equipment (up to 8 kg per person), so you only carry the essentials.  
+          ✔︎ Muleteer: The person in charge of taking care of the pack animals and making sure that all the equipment arrives at the destination.  
+          ✔︎ Emergency horse: In case of any unforeseen situation, this horse can be used to evacuate someone.  
+          ✔︎ First-aid kit: We have the necessary items to deal with any minor medical emergencies.  
+        </p>
+      </ReadMore>
+    </div>
+
+    <div data-panel="notinclude" hidden>
+      <ReadMore collapsedHeight="14rem" fadeColor="#fafafa">
+        <p>
+          ✘ Meals in Huaraz: Meals before and after the trek are not included.  
+          ✘ Entrance fees to communities: In some cases, there may be an additional cost to enter certain communities.  
+          ✘ Tips: If you wish to thank the guide, cook, and muleteer for their service, you can leave a tip.  
+          ✘ Personal expenses: Personal expenses such as additional drinks, snacks, souvenirs, etc.
+        </p>
+      </ReadMore>
+    </div>
+  </Tabs>
+</div>
+
+<div class="mt-16 mb-12">
+  <details class="group bg-white p-6 shadow-sm mt-6">
+  <summary class="justify-between items-center cursor-pointer text-xl font-normal text-color-primary ">Recommendations</summary>
+  ```
+  All the activities we offer take place in mountainous terrain, some more extreme than others. In any case, we always work with the utmost safety for your enjoyment in each experience.
+
+  • Proper Clothing: It is recommended to wear trekking boots with non-slip soles, waterproof pants and jacket, as well as a thermal base layer of lycra or wool. The second layer should be a fleece jacket, along with hats for sun and cold protection.  
+  • Sun Protection: Sunscreen with SPF 45 or higher, and sunglasses with 100% UV protection.  
+  • Hydration: It is crucial to carry a water container of at least 1 liter with thermal insulation.  
+  • Lighting: A headlamp with batteries.  
+  • Electronics: Bring only essential electronics, including a camera to capture memories.
+
+  ```
+  </details>
+
+  <details class="group bg-white p-6 shadow-sm mt-6 rounded-sm">
+  <summary class="justify-between items-center cursor-pointer text-xl font-normal text-color-primary">Required Conditions (Acclimatization)</summary>
+  ```
+  It is essential that all participants in the expedition are well acclimatized. This means spending at least 2-3 days prior to the activity at an altitude above 4,000 meters above sea level. Proper acclimatization is crucial to reduce the risk of altitude sickness and ensure a safe and enjoyable experience.
+  ```
+  </details>
+
+  <details class="group bg-white p-6 shadow-sm mt-6 rounded-sm">
+  <summary class="justify-between items-center cursor-pointer text-xl font-normal text-color-primary">Tourist Responsibility</summary>
+  ```
+  Each participant must follow the guide's instructions at all times. Tourists are expected to behave responsibly, care for the environment, and avoid generating waste. It is also the tourist's responsibility to bring their personal medications and inform the team of any relevant medical conditions before departure.
+  ```
+  </details>
+
+  <details class="group bg-white p-6 shadow-sm mt-6 rounded-sm">
+  <summary class="justify-between items-center cursor-pointer text-xl font-normal text-color-primary">Booking Policies</summary>
+  ```
+  • Deposit: A 50% deposit of the total cost is required to confirm the reservation.
+  • Cancellations: Cancellations made more than 30 days in advance will receive a full refund. Cancellations within 30 days of departure will be subject to a 30% penalty. Cancellations within 7 days of departure will not receive a refund.
+  • Date Changes: Date changes are allowed without penalty if requested at least 15 days in advance.
+
+  ```
+  </details>
+</div>

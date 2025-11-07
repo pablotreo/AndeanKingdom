@@ -6,10 +6,10 @@ module.exports = {
       colors: {
          color: {
           primary: "#1D2E45",      // Azul oscuro (texto principal, header)
-          secondary: "#E98A3B",    // Naranja (botones, acentos)
-          accent: "#F5C383",       // Amarillo suave (hover, detalles)
-          neutral: "#4D4D4D",      // Gris oscuro (texto o iconos)
-          light: "#FFFFFF",        // Blanco
+          secondary: "#e67a37",    // Naranja (botones, acentos)
+          accent: "#f5c383",       // Amarillo suave (hover, detalles)
+          neutral: "#4d4d4d",      // Gris oscuro (texto o iconos)
+          light: "#ffffff",        // Blanco
         },
       },
       fontFamily: {
@@ -20,5 +20,5 @@ module.exports = {
   },
   plugins: [
     require('@tailwindcss/typography'),
-  ],
+  ]
 };

@@ -1,17 +1,20 @@
 ---
 const testimonials = [
-  { name: "John Perez", text: "Excellent service, highly recommendable. An unforgettable experience, 100% recommendable. An unforgettable experience, 100% recommendable", link: "#" },
-  { name: "Ana Garcia", text: "I loved the experience, I'll definitely return.", link: "#" },
-  { name: "Carlos Lopez", text: "Incredible service, the best place.", link: "#" },
-  { name: "Laura Martinez", text: "An unforgettable experience, 100% recommendable. An unforgettable experience, 100% recommendable", link: "#" },
-  { name: "David Gonzalez", text: "The best in town, first-class attention. An unforgettable experience, 100% recommendable. An unforgettable experience, 100% recommendable", link: "#" },
-  { name: "Sofia Rodriguez", text: "Impressive quality. I'll definitely come back. An unforgettable experience, 100% recommendable. An unforgettable experience, 100% recommendable", link: "#" },
+  { name: "Byron Muir", text: " Luly is so knowledgeable and so happy to share it! The gear she rents out is great quality, I can totally recommend checking out Andean Kingdom for mountain or climbing adventures ", link: "https://share.google/0Sxy54IRtk4JqEKOv" },
+  { name: "Che Maurer", text: " Thank you Luly for your great advice, quality kit and patience with us! Much recommended in Huaraz. ", link: "https://share.google/cNSXNiG9BVZhY8i9x" },
+  { name: "Tatiana Lamarche", text: " Luciana nous a organisé en quelques heures un trek de 3 jours en famille hors du commun. Elle connaît la région comme sa poche et a très bien compris nos besoins et volontés. Je recommande vivement Andean Kingdom pour toutes vos aventures dans la Cordillère Blanche pour son expertise et son professionnalisme. ", link: "https://share.google/aBEQAEnrMIn0JnDeQ" },
+  { name: "Vibe Moller", text: " We rented gear for the Santa Cruz trek, and Andean Kingdom was very helpful! They help and prepared us well for the trip, and the gear was good. Would definitely recommend if you wanna do the Santa Cruz solo! Regards Benjamin and Vibe ", link: "https://share.google/VkZmZoRXlYGP5xaNq" },
+  { name: "Marguerite van Woerkom", text: " Luly was the greatest help for our 8-day Huayhuash trek. We rented all the equipment from here and most importantly got super valuable and personal help with planning out the whole trek. Luly is a super cool person and knows what she’s doing. Recommend going here 10/10! ", link: "https://share.google/NShNYZaDUpGqe3qg8" },
+  { name: "Gabriel Cox", text: " Andean Kingdom were incredible in helping us prep for the 8 day Huayhuash trek. Rented us all the equipment (that all worked perfectly) for a reasonable price, and most importantly helped with route planning and recommendations for the trek. Most importantly they helped my partner and I believe that we could do it unguided and without a mule, which was invaluable. ", link: "https://share.google/QauXSd1wAWYVUl6ea" },
+  { name: "Peggy Hughes", text: " Luly was amazing with helping me to book the Santa Cruz trek, some day tours, planning some self-guided trips, and even with fixing my boots! Super friendly, helpful, and knowledgable place. Can definitely recommend ", link: "https://share.google/NUvJI8g0X64U6X7jH" },
+  { name: "BTom Ramdohr", text: " Eine super Option Wanderbekleidung aller Art auszuleihen. Ich habe Schlafsack, Jacke und Handschuhe geliehen und alle waren im guten Zustand. Habe die Sachen 2 Tage vor eigentlicher Rückgabe zurückgebracht und Geld wiederbekommen. Sehr zu Empfehlen ", link: "https://share.google/hFNELTzIHPlUdegRB" },
+  { name: "Julius Oblong", text: " Luly and Sol at Andean Kingdom provided me with great advice and opportunities for climbing and hiking. Finally we rented gear and had a flawless experience with their services. Despite the rainy season we had a great time in Huayhuash (self-guided) and enjoyed the recommended routes. Thank you! ", link: "https://share.google/kwIV1Fru7VaNPRPFV" },
 ];
 ---
 
-<div class="max-w-6xl mx-auto py-12">
-  <h2 class="text-4xl font-bold text-center mb-4">What Our Customers Say</h2>
-  <p class="text-xl text-center mb-12">Discover why people trust us with their experiences</p>
+<div class="max-w-6xl mx-auto py-24 mb-40">
+  <h2 class="text-6xl font-normal text-center mb-4">What Our Customers Say</h2>
+  <p class="text-2xl text-center mb-12">Discover why people trust us with their experiences</p>
 
   <div
     id="testimonialsContainer"
@@ -19,11 +22,11 @@ const testimonials = [
   >
     {testimonials.map((t) => (
       <div
-        class="bg-white p-6 rounded-lg flex-shrink-0 border border-gray-300 snap-center 
+        class="bg-white p-6 rounded-sm flex-shrink-0 border border-gray-300 snap-center 
                w-[90vw] sm:w-[45vw] md:w-[30vw] transition-transform duration-500"
       >
-        <p class="text-lg text-gray-700 mb-4">
-          "{t.text}"
+        <p class="text-xl text-gray-700 mb-4">
+          “{t.text}ˮ
           <a href={t.link} target="_blank" class="text-color-secondary hover:underline">Read more</a>
         </p>
         <p class="font-semibold text-gray-900 text-right">- {t.name}</p>
@@ -91,7 +94,7 @@ const testimonials = [
           container.scrollBy({ left: container.clientWidth / 2, behavior: 'smooth' });
         }
       }
-    }, 4000);
+    }, 5000);
   }
   startAutoScroll();
 </script>

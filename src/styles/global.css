@@ -71,11 +71,11 @@
 }
     
   body {
-    @apply font-sans text-gray-800 bg-gray-50;
+    @apply font-sans text-color-primary bg-gray-50;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-serif font-bold text-gray-900;
+    @apply font-bold text-color-primary;
   }
 
   h1 {
@@ -125,7 +125,7 @@
   }
 
   .btn-outline {
-    @apply text-gray-700 bg-white border border-gray-300 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+    @apply text-color-primary bg-white border border-gray-300 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
   }
 
   .card {
@@ -146,7 +146,7 @@ details[open] > summary svg {
   transform: rotate(45deg);
 }
 
-/* accordion styles 
+/* accordion styles  */
 details {
   border: none;
   margin: 0;
@@ -191,4 +191,4 @@ details p {
   margin: 0.3rem 0 0.8rem 1.4rem; 
   color: #555;
   line-height: 1.5;
-}*/
+}

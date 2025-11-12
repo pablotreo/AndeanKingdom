@@ -1,0 +1,196 @@
+---
+import Tabs from "../../components/UI/Tabs.astro";
+import ReadMore from "../../components/UI/ReadMore.astro";
+---
+
+<div class="px-2 mb-40">
+  <Tabs class="my-36"
+    tabs={[
+      { id: "recommendations", label: "RECOMMENDATIONS" },
+      { id: "acclimatization", label: "ACCLIMATIZATION" },
+      { id: "responsibility", label: "RESPONSIBILITY" },
+      { id: "booking-policies", label: "BOOKING POLICIES" },
+
+    ]}
+  >
+    <div data-panel="recommendations">
+    <ReadMore collapsedHeight="14rem" fadeColor="#ffffff">
+      <div class="text-xl px-6 pb-5 text-color-primary leading-relaxed">
+        All the activities we offer take place in mountainous terrain, some more extreme than others.  
+        In any case, we always work with the utmost safety for your enjoyment in each experience.
+        <ul class="list-disc pl-6 mt-3 space-y-1">
+          <li><b>Proper Clothing:</b> Wear trekking boots with non-slip soles, waterproof pants and jacket, plus a thermal base layer of lycra or wool. Add a fleece jacket and hats for sun and cold protection.</li>
+          <li><b>Sun Protection:</b> Sunscreen SPF 45+ and sunglasses with 100% UV protection.</li>
+          <li><b>Hydration:</b> Carry at least 1 L of water with insulation.</li>
+          <li><b>Lighting:</b> Bring a headlamp with spare batteries.</li>
+          <li><b>Electronics:</b> Only essentials, including a camera to capture memories.</li>
+        </ul>
+      </div>
+    </ReadMore>
+    </div>
+
+    <div data-panel="acclimatization" hidden>
+      <ReadMore collapsedHeight="14rem" fadeColor="#fafafa">
+        <div class="text-xl px-6 pb-5 text-color-primary leading-relaxed">
+          It is essential that all participants are well acclimatized, spending at least 2–3 days above 4,000 m a.s.l.  
+          Proper acclimatization reduces the risk of altitude sickness and ensures a safe and enjoyable experience.
+        </div>
+      </ReadMore>
+    </div>
+    <div data-panel="responsibility" hidden>
+      <ReadMore collapsedHeight="14rem" fadeColor="#fafafa">
+        <div class="text-xl px-6 pb-5 text-color-primary leading-relaxed">
+          Each participant must follow the guide's instructions at all times.  
+          Tourists are expected to act responsibly, care for the environment, and avoid leaving waste.  
+          It’s also the tourist's responsibility to bring their personal medications and inform the team of any relevant medical conditions before departure.
+        </div>
+      </ReadMore>
+    </div>
+    <div data-panel="booking-policies" hidden>
+      <ReadMore collapsedHeight="14rem" fadeColor="#fafafa">
+        <div class="text-xl px-6 pb-5 text-color-primary leading-relaxed">
+          <ul class="list-disc pl-6 space-y-1">
+            <li><b>Deposit:</b> 50 % of the total cost is required to confirm the reservation.</li>
+            <li><b>Cancellations:</b><br/>
+              • More than 30 days in advance → full refund.<br/>  
+              • Within 30 days → 30 % penalty.<br/>
+              • Within 7 days → no refund.
+            </li>
+            <li><b>Date Changes:</b> Allowed without penalty if requested at least 15 days in advance.</li>
+          </ul>
+        </div>
+      </ReadMore>
+    </div>
+  </Tabs>
+</div>
+
+<!--
+
+<div class="mt-16 mb-12 space-y-6">
+  <details class="group bg-white/90 rounded-sm border border-gray-100 shadow-sm overflow-hidden transition-all duration-300 open:shadow-md">
+    <summary class="flex justify-between items-center cursor-pointer px-6 py-6 text-2xl text-color-primary transition-colors duration-300 font-medium">
+      <span>Recommendations</span>
+      <span class="text-color-secondary text-4xl leading-none transition-transform duration-300 group-open:rotate-45">+</span>
+    </summary>
+
+    <div class="text-xl px-6 pb-5 text-color-primary leading-relaxed">
+      All the activities we offer take place in mountainous terrain, some more extreme than others.  
+      In any case, we always work with the utmost safety for your enjoyment in each experience.
+      <ul class="list-disc pl-6 mt-3 space-y-1">
+        <li><b>Proper Clothing:</b> Wear trekking boots with non-slip soles, waterproof pants and jacket, plus a thermal base layer of lycra or wool. Add a fleece jacket and hats for sun and cold protection.</li>
+        <li><b>Sun Protection:</b> Sunscreen SPF 45+ and sunglasses with 100% UV protection.</li>
+        <li><b>Hydration:</b> Carry at least 1 L of water with insulation.</li>
+        <li><b>Lighting:</b> Bring a headlamp with spare batteries.</li>
+        <li><b>Electronics:</b> Only essentials, including a camera to capture memories.</li>
+      </ul>
+    </div>
+  </details>
+  <details class="group bg-white/90 rounded-sm border border-gray-100 shadow-sm overflow-hidden transition-all duration-300 open:shadow-md">
+    <summary class="flex justify-between items-center cursor-pointer px-6 py-5 font-medium  text-2xl text-color-primary transition-colors duration-300">
+      <span>Acclimatization</span>
+      <span class="text-color-secondary text-4xl leading-none transition-transform duration-300 group-open:rotate-45">+</span>
+    </summary>
+
+    <div class="text-xl px-6 pb-5 text-color-primary leading-relaxed">
+      It is essential that all participants are well acclimatized, spending at least 2–3 days above 4,000 m a.s.l.  
+      Proper acclimatization reduces the risk of altitude sickness and ensures a safe and enjoyable experience.
+    </div>
+  </details>
+  <details class="group bg-white/90 rounded-sm border border-gray-100 shadow-sm overflow-hidden transition-all duration-300 open:shadow-md">
+    <summary class="flex justify-between items-center cursor-pointer px-6 py-5 text-2xl font-medium text-color-primary transition-colors duration-300">
+      <span>Tourist Responsibility</span>
+      <span class="text-color-secondary text-4xl leading-none transition-transform duration-300 group-open:rotate-45">+</span>
+    </summary>
+
+    <div class="text-xl px-6 pb-5 text-color-primary leading-relaxed">
+      Each participant must follow the guide's instructions at all times.  
+      Tourists are expected to act responsibly, care for the environment, and avoid leaving waste.  
+      It’s also the tourist's responsibility to bring their personal medications and inform the team of any relevant medical conditions before departure.
+    </div>
+  </details>
+  <details class="group bg-white/90 rounded-sm border border-gray-100 shadow-sm overflow-hidden transition-all duration-300 open:shadow-md">
+    <summary class="flex justify-between items-center cursor-pointer px-6 py-5 text-2xl font-medium text-color-primary transition-colors duration-300">
+      <span>Booking Policies</span>
+      <span class="text-[#e77b39] text-4xl leading-none transition-transform duration-300 group-open:rotate-45">+</span>
+    </summary>
+
+    <div class="text-xl px-6 pb-5 text-color-primary leading-relaxed">
+      <ul class="list-disc pl-6 space-y-1">
+        <li><b>Deposit:</b> 50 % of the total cost is required to confirm the reservation.</li>
+        <li><b>Cancellations:</b>  
+          • More than 30 days in advance → full refund.  
+          • Within 30 days → 30 % penalty.  
+          • Within 7 days → no refund.
+        </li>
+        <li><b>Date Changes:</b> Allowed without penalty if requested at least 15 days in advance.</li>
+      </ul>
+    </div>
+  </details>
+
+</div>
+
+ <ul class="space-y-2 text-color-primary leading-relaxed text-xl p-4">
+      <li class="flex gap-2">
+        <span class="text-color-secondary font-bold">✔︎</span>
+        <span><strong>Bilingual Certified Guide:</strong> A local expert who will accompany you throughout the tour, explaining the flora, fauna, culture, and geography of the area. They speak both Spanish and English.</span>
+      </li>
+      <li class="flex gap-2">
+        <span class="text-color-secondary font-bold">✔︎</span>
+        <span><strong>Cook:</strong> They will be in charge of preparing delicious hot meals at the campsite, including vegetarian options.</span>
+      </li>
+      <li class="flex gap-2">
+        <span class="text-color-secondary font-bold">✔︎</span>
+        <span><strong>Assistant:</strong> They will help the guide with all tasks, ensuring that your experience is comfortable and safe.</span>
+      </li>
+      <li class="flex gap-2">
+        <span class="text-color-secondary font-bold">✔︎</span>
+        <span><strong>Round-trip private transportation:</strong> We will pick you up and drop you off at your hotel in Huaraz, and transport you to the start and end of the trek.</span>
+      </li>
+      <li class="flex gap-2">
+        <span class="text-color-secondary font-bold">✔︎</span>
+        <span><strong>Camping equipment:</strong> Everything you need to camp comfortably: individual tents for each person, sleeping bags that will keep you warm, sleeping mats, a tent for cooking and eating, chairs, tables, pots, plates, cutlery, and more. We also include a power bank and solar panel to charge your electronic devices.</span>
+      </li>
+      <li class="flex gap-2">
+        <span class="text-color-secondary font-bold">✔︎</span>
+        <span><strong>Personal equipment:</strong> We will provide you with the basics for the trek: waterproof bags for your belongings, backpacks, rain and warm clothes, a buff (multifunctional scarf), trekking poles, a headlamp, and gloves.</span>
+      </li>
+      <li class="flex gap-2">
+        <span class="text-color-secondary font-bold">✔︎</span>
+        <span><strong>Four daily meals:</strong> Breakfast, lunch, afternoon snack, and dinner during the trek. If you are vegetarian, don't worry, we have options for you.</span>
+      </li>
+      <li class="flex gap-2">
+        <span class="text-color-secondary font-bold">✔︎</span>
+        <span><strong>Donkeys:</strong> They will transport all the camping equipment and part of your personal equipment (up to 8 kg per person), so you only carry the essentials.</span>
+      </li>
+      <li class="flex gap-2">
+        <span class="text-color-secondary font-bold">✔︎</span>
+        <span><strong>Muleteer:</strong> The person in charge of taking care of the pack animals and making sure that all the equipment arrives at the destination.</span>
+      </li>
+      <li class="flex gap-2">
+        <span class="text-color-secondary font-bold">✔︎</span>
+        <span><strong>Emergency horse:</strong> In case of any unforeseen situation, this horse can be used to evacuate someone.</span>
+      </li>
+      <li class="flex gap-2">
+        <span class="text-color-secondary font-bold">✔︎</span>
+        <span><strong>First-aid kit:</strong> We have the necessary items to deal with any minor medical emergencies.</span>
+      </li>
+    </ul> 
+    <ul class="space-y-2 text-color-primary leading-relaxed text-xl p-4">
+          <li class="flex gap-2">
+            <span class="text-color-secondary font-bold">✘</span>
+            <span><strong>Meals in Huaraz:</strong> Meals before and after the trek are not included. </span>
+          </li>
+          <li class="flex gap-2">
+            <span class="text-color-secondary font-bold">✘</span>
+            <span><strong>Entrance fees to communities:</strong> In some cases, there may be an additional cost to enter certain communities.  </span>
+          </li>
+          <li class="flex gap-2">
+            <span class="text-color-secondary font-bold">✘</span>
+            <span><strong>Tips:</strong> If you wish to thank the guide, cook, and muleteer for their service, you can leave a tip.  </span>
+          </li>
+          <li class="flex gap-2">
+            <span class="text-color-secondary font-bold">✘</span>
+            <span><strong>Personal expenses:</strong> Personal expenses such as additional drinks, snacks, souvenirs, etc.</span>
+          </li>
+        </ul>
+    -->

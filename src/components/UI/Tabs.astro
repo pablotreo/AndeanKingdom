@@ -4,10 +4,10 @@ const { tabs, initial = 0 } = Astro.props as { tabs: Tab[]; initial?: number };
 ---
 
 <section class="w-full" id="tabs">
-  <div class="flex gap-x-6 justify-start flex-wrap">
+  <div class="flex gap-x-6 justify-start flex-nowrap overflow-x-auto no-scrollbar">
     {tabs.map((t, i) => (
       <button
-        class={`tab-btn text-2xl inline-flex items-center justify-center py-1 border-b-4 border-transparent font-medium transition-colors
+        class={`tab-btn text-md sm:text-xl inline-flex items-center justify-center py-2 border-b-2 border-transparent font-medium transition-colors
         ${i === initial ? 'text-color-secondary border-color-secondary' : 'text-color-primary hover:text-color-secondary'}`}
         data-tab={t.id}
         aria-selected={i === initial ? 'true' : 'false'}
@@ -21,6 +21,17 @@ const { tabs, initial = 0 } = Astro.props as { tabs: Tab[]; initial?: number };
     <slot />
   </div>
 </section>
+
+<style>
+  /* No Scrollbar */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  } 
+</style>
 
 <script is:inline>
   document.addEventListener("DOMContentLoaded", () => {

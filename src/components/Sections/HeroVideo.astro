@@ -5,7 +5,7 @@ const {
   title = ["Discover", "Cordillera Blanca", "and Huayhuash"], 
   subtitle = "If you think it's impossible, we can make it happen!", 
   buttonText = "Choose Your Experience", 
-  buttonLink = "#", 
+  buttonLink = "#experiences", 
   videoSrc = "/uploads/Video.mp4" } = Astro.props;
 
 ---
@@ -41,7 +41,7 @@ const {
 
     <p class="text-lg md:text-4xl mb-6">{subtitle}</p>
 
-    <ButtonArrowBlanco text="Choose Your Experience" href="/mountaineering" />
+    <ButtonArrowBlanco text={buttonText} href={buttonLink} />
 
   </div>
 </section>

@@ -17,7 +17,7 @@
   html {
     scroll-behavior: auto; /* Let Lenis control it */
     overflow: auto;
-    /* @apply scroll-smooth; */
+    @apply scroll-smooth;
   }
 
   /* Si Lenis no se carga magia por aca */
